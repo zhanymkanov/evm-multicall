@@ -1,0 +1,15 @@
+[package]
+name = "tokens-explorer"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+hex = "0.4.3"
+web3 = "0.18.0"
+reqwest = { version = "0.11", features = ["json"] }
+tokio = { version= "1.21.0", features = ["full"] }
+dotenv = "0.15.0"
+const_format = "0.2.26"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+futures = "0.3.24"
