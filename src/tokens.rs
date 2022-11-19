@@ -2,7 +2,7 @@ use std::collections::HashMap;
 
 use crate::models::TargetToken;
 
-fn get_trusted_tokens() -> [TargetToken; 6] {
+fn get_target_tokens() -> [TargetToken; 6] {
     [
         TargetToken {
             chain_id: 1,
@@ -37,16 +37,16 @@ fn get_trusted_tokens() -> [TargetToken; 6] {
     ]
 }
 
-pub fn get_chains_trusted_tokens() -> HashMap<i64, Vec<TargetToken>> {
-    let tokens = get_trusted_tokens();
+pub fn get_chains_tokens() -> HashMap<i64, Vec<TargetToken>> {
+    let tokens = get_target_tokens();
 
-    let mut chain_trusted_tokens: HashMap<i64, Vec<TargetToken>> = HashMap::new();
+    let mut chain_tokens: HashMap<i64, Vec<TargetToken>> = HashMap::new();
     for token in tokens.into_iter() {
-        chain_trusted_tokens
+        chain_tokens
             .entry(token.chain_id)
             .or_insert_with(Vec::new)
             .push(token);
     }
 
-    chain_trusted_tokens
+    chain_tokens
 }
