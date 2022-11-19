@@ -1,4 +1,4 @@
-## Rust Web3 Multicall Example
+## EVM Multicall with Rust & Web3
 
 Request address's balance for USDC, USDT, and DAI/BUSD on Ethereum and BSC with 2 RPC calls, instead of 6.
 
